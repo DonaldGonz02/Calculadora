@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
 </head>
 <body>
     <!--Agregamos form a la tabla para darle funcion de poder operar-->
-    <form name="Calculadora" action=""></form>
+    <form name="Calculadora">
     <table border="1" align="center" style="width: 300px; height: 300px;">
     <!--Creamos la primer fila de la calculadora-->
         <tr>
@@ -20,29 +20,35 @@
             <td><input type="button" value="7" onclick="pantalla.value+='7'"></td>
             <td><input type="button" value="8" onclick="pantalla.value+='8'"></td>
             <td><input type="button" value="9" onclick="pantalla.value+='9'"></td>
-            <td>4</td>
+            <td><input type="button" value="/" onclick="pantalla.value+='/'"></td>
         </tr>
     <!--Creamos la tercera fila de la calculadora-->
         <tr>
             <td><input type="button" value="4" onclick="pantalla.value+='4'"></td>
             <td><input type="button" value="5" onclick="pantalla.value+='5'"></td>
             <td><input type="button" value="6" onclick="pantalla.value+='6'"></td>
-            <td>4</td>
+            <td><input type="button" value="*" onclick="pantalla.value+='*'"></td>
         </tr>
     <!--Creamos la Cuarta fila de la calculadora-->
         <tr>
             <td><input type="button" value="1" onclick="pantalla.value+='1'"></td>
             <td><input type="button" value="2" onclick="pantalla.value+='2'"></td>
             <td><input type="button" value="3" onclick="pantalla.value+='3'"></td>
-            <td>4</td>
+            <td><input type="button" value="-" onclick="pantalla.value+='-'"></td>
         </tr>
     <!--Creamos la Quinta fila de la calculadora-->
+    <!--Si en dado caso quisieramos agregar el botón C para restablecer el valor a 0, copiamos la línea de Imput (<input type="button" value="C" onclick="pantalla.value+=''">) y en onclick debamos vacío la igualdad-->
         <tr>
-            <td>1</td>
+            <td><input type="button" value="%" onclick="pantalla.value+='%'"></td>
             <td><input type="button" value="0" onclick="pantalla.value+='0'"></td>
-            <td>3</td>
-            <td>4</td>
+            <td><input type="button" value="." onclick="pantalla.value+='.'"></td>
+            <td><input type="button" value="=" onclick="pantalla.value=eval(pantalla.value)"></td>
         </tr>
+        <!--El imput cnosiste en: 
+                un "type" que especifica que tipo de boton será, o bien, cual es su funcionalidad; 
+                un "value, que indicará el valor que tomará al ejecutar el código;
+                una evento que será su interacción, como onclick,     
+        -->
         </table>
     </form>
 </body>
